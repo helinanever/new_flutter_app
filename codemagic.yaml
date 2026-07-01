@@ -3,6 +3,7 @@ workflows:
     name: Build iOS packages pub get
     environment:
       xcode: latest
+      flutter: stable
     scripts:
       - flutter packages pub get
       - flutter build ios --no-codesign
@@ -13,6 +14,7 @@ workflows:
     name: Build iOS pub get
     environment:
       xcode: latest
+      flutter: stable
     scripts:
       - flutter pub get
       - flutter build ios --no-codesign
