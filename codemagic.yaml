@@ -1,0 +1,21 @@
+workflows:
+  build-ios-new:
+    name: Build iOS packages pub get
+    environment:
+      xcode: latest
+    scripts:
+      - flutter packages pub get -v
+      - flutter build ios --no-codesign
+    artifacts:
+      - /tmp/xcodebuild_logs/*.log
+
+  build-ios-new-alt:
+    name: Build iOS pub get
+    environment:
+      xcode: latest
+    scripts:
+      - flutter pub get -v
+      - flutter build ios --no-codesign
+    artifacts:
+      - /tmp/xcodebuild_logs/*.log
+ 
