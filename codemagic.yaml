@@ -4,7 +4,7 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - flutter packages pub get -v
+      - flutter packages pub get
       - flutter build ios --no-codesign
     artifacts:
       - /tmp/xcodebuild_logs/*.log
@@ -14,7 +14,7 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - flutter pub get -v
+      - flutter pub get
       - flutter build ios --no-codesign
     artifacts:
       - /tmp/xcodebuild_logs/*.log
